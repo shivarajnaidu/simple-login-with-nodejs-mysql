@@ -1,9 +1,15 @@
 import express from 'express';
-import { createUser } from '../controllers/users.js';
+import * as controller from '../controllers/users.js';
 
 const router = express.Router();
 
 router.route('/')
-    .post(createUser);
+    .get(controller.getUsers)
+    .post(controller.createUser);
+
+router.route('/:id')
+    .get(controller.getUserById)
+    .put(controller.updateUserById)
+    .delete(controller.deleteById);
 
 export const userRouter = router;

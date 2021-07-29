@@ -15,6 +15,11 @@ CREATE TABLE `users` (
 )
 ```
 
+## Steps to run
+1. Instal npm deps with `npm i`
+2. add `.env` file with keys available in `sample.env` - replace with your values
+3. if you want to change db host you can find configuration files under config folder
+4. now run `npm run dev` to start the server with ndoemon or `node server.js` to run with nodejs directly
 
 ### API path 
 `http://localhost:3000/api/v1/users`
